@@ -37,3 +37,7 @@ var myQuestions = [
       ]
     }
 ];
+
+// Export the array of questions
+//export { myQuestions};
+
