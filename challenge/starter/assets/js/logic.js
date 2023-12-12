@@ -13,5 +13,35 @@ var timeEl = document.getElementById('time');
 var finalScore = document.getElementById('final-score');
 var inputInitials = document.getElementById('initials');
 var submitBtn = document.getElementById('submit');
+
+//add event listeners to listen for the 'click'
+startBtn.addEventListener('click', startQuiz);
+submitBtn.addEventListener('click', saveScore);
+
+// add function to start the quiz
+function startQuiz() {
+hideStartScreen();
+renderQuestion();
+startTimer();
+}
+
+// add function to render a question
+function renderQuestion() {
+    var currentQuestion = myQuestions[questionIndex];
+
+    //Display the title of the questions
+    questionTitle.textContent = currentQuestion.question;
+
+    choicesContainer.innerHTML = '';
+
+    //Create a lopp through each of the options forming buttons for each to be available to click
+     currentQuestion.options.forEach((option, index)) => {
+        var optionButton = document.createElement('button');
+        optionButton.textContent = option.text;
+        optionButton.classList.add('choice-btn');
+     }
+}
+
+
 //Log the array to the console
 //console.log(questions);
