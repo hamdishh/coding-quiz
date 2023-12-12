@@ -17,5 +17,23 @@ var myQuestions = [
        { text: '3. parenthesis', correct: true },
        { text: '4. square brackets', correct: false},
      ]
+    },
+    {
+      question: 'String values must be enclosed within ____ when being assigned to variables',
+      options: [
+      { text: '1. commas', correct: false },
+      { text: '2. curly brackets', correct: false },
+      { text: '3. quotes', correct: true },
+      { text: '4. parentheses,', correct: false },
+    ]
+    },
+    {
+      question: 'A very useful tool used during development and debugging for printing content to the debugger is:',
+      options: [
+    { text: '1. JavaScript', correct: false },
+    { text: '2. terminal/bash', correct: false },
+    { text: '3. for loops', correct: false },
+    { text: '4. console.log', correct: true },
+      ]
     }
 ];
