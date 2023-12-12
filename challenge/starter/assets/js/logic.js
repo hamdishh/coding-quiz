@@ -1,5 +1,7 @@
 // Import the questions array from questions.js
 //import { myQuestions } from './questions.js';
+//import functions from scores.js
+//import { saveScore, getSavedScore, displayFinalScore } from './scores.js';
 
 // Assign the questions array to a property of the window object
 window.myQuestions = myQuestions;
@@ -35,8 +37,19 @@ var score = 0;
 
 //define the startTimer function
 function startTimer() {
-console.log(("Timer has started!"));
+    countDown = setInterval(function () {
+        console.log("Seconds remaining: " + secsRemaining);
+
+        if (secsRemaining <= 0) {
+            clearInterval(countDown);
+            console.log("Time's up!");
+            // Add any additional logic for when time is up
+        } else {
+            secsRemaining--; // Decrement the remaining time
+        }
+    }, 1000); // Update every 1000 milliseconds (1 second)
 }
+
 
 //add function to ensure the scores will be saved
 function saveScore(score) {
